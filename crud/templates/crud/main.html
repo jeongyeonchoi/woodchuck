@@ -1,7 +1,10 @@
 <h1>curd/main.html</h1>
 
 {% for post in posts.all %}
-    {{ post.title }}
-    {{ post.content }}
-    {{ post.created_at }}
+    <!-- 제목 누르면 read 페이지로 가도록 구현 -->
+    <h3><a href="{% url 'show' post.id %}">제목 : {{ post.title }}</a></h3> 
+    <h3>내용 : {{ post.summary }}</h3>
+    <h4>작성 날짜 : {{ post.created_at }}</h4>
+    <h4>수정 날짜 : {{ post.updated_at }}</h4>
+    <br/>
 {% endfor %}

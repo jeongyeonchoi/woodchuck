@@ -20,4 +20,5 @@ import crud.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', crud.views.main, name='main'),
+    path('crud/<int:post_id>', crud.views.show, name='show'),
 ]
