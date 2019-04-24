@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Post
 
 # Create your views here.
 def main(request):
-    return render(request, 'crud/main.html')
+    posts = Post.objects
+    return render(request, 'crud/main.html', {'posts': posts})

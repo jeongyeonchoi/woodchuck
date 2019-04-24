@@ -1,1 +1,7 @@
 <h1>curd/main.html</h1>
+
+{% for post in posts.all %}
+    {{ post.title }}
+    {{ post.content }}
+    {{ post.created_at }}
+{% endfor %}
