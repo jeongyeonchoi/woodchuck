@@ -21,4 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', crud.views.main, name='main'),
     path('crud/<int:post_id>', crud.views.show, name='show'),
+    path('crud/new', crud.views.new, name='new'),
+    path('crud/postcreate', crud.views.postcreate, name='postcreate'),
+    path('crud/edit', crud.views.edit, name='edit'),
+    path('crud/postupdate/<int:post_id>', crud.views.postupdate, name='postupdate'),
+    path('crud/postdelete/<int:post_id>', crud.views.postdelete, name='postdelete'),
 ]

@@ -5,3 +5,5 @@
 <h5>작성 날짜 : {{ post.created_at }}</h5>
 <h5>수정 날짜 : {{ post.updated_at }}</h5>
 <p>{{ post.content }}</p>
+<a href = "{% url 'postupdate' post.id %}">수정하기</a>
+<a href="{% url 'postdelete' post.id %}" onclick="return confirm('정말 삭제하시겠습니까?')">삭제하기</a>
