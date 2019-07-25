@@ -1,0 +1,1 @@
+web: gunicorn prenewbiethonproject.wsgi --log-file -
